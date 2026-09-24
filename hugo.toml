@@ -1,0 +1,20 @@
+baseURL = "https://example.org/"
+languageCode = "en"
+title = "AI Founder Academy"
+
+[params]
+  description = "A hands-on AI program for founders."
+
+[menus]
+  [[menus.main]]
+    name = "Founder AI OS"
+    url = "#program"
+    weight = 10
+  [[menus.main]]
+    name = "How it works"
+    url = "#how-it-works"
+    weight = 20
+  [[menus.main]]
+    name = "About"
+    url = "#about"
+    weight = 30

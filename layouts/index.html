@@ -1,0 +1,94 @@
+{{ define "main" }}
+<div class="page-shell">
+  <header class="site-header wrap">
+    <a class="wordmark" href="#top">AI Founder <span>Academy</span></a>
+    <nav aria-label="Main navigation">
+      {{ range site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}
+    </nav>
+    <a class="button button-small" href="#waitlist">Join the waitlist</a>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> AI training for founders</p>
+        <h1>Stop chatting with AI.<br><em>Start taking work</em><br>off your plate.</h1>
+        <p class="lead">A hands-on AI program for busy founders who want to move beyond ChatGPT prompts and start using AI to do real work across their business.</p>
+        <p class="lead secondary">Connect AI to the tools you already use, turn repetitive work into reliable workflows, and get more done with a small team without coding, chasing every new tool, or sacrificing the rest of your life.</p>
+        <a class="button" href="#waitlist">Join the 1:1 waitlist <b>↗</b></a>
+        <p class="microcopy">3 weeks · 1:1 · Hands-on · Built around your business</p>
+      </div>
+      <div class="hero-board" aria-label="Diagram of a founder's work flowing through AI">
+        <div class="board-label">A founder's week</div>
+        <div class="board-line"><span>MON</span><i class="human">Investor update</i><i class="ai">Research + first draft</i></div>
+        <div class="board-line"><span>TUE</span><i class="human">Customer calls</i><i class="ai">Notes → CRM</i></div>
+        <div class="board-line"><span>WED</span><i class="human">Strategy</i><i class="ai">Competitor monitor</i></div>
+        <div class="board-line"><span>THU</span><i class="human">Build</i><i class="ai">Brief → prototype</i></div>
+        <div class="board-line"><span>FRI</span><i class="human">Decisions</i><i class="ai">Weekly summary</i></div>
+        <p class="board-note">On our call, we map your own week like this.</p>
+        <svg class="scribble" viewBox="0 0 160 80" aria-hidden="true"><path d="M8 10 C58 3 126 9 151 36 C161 54 108 74 47 66"/></svg>
+      </div>
+    </section>
+
+    <section class="problem wrap section-grid">
+      <p class="section-number">01 / THE PROBLEM</p>
+      <div>
+        <h2>You know AI could help.<br>You just have not had time<br>to figure it out.</h2>
+        <div class="prose columns">
+          <p>You are running a company. There is always something more urgent: an investor update, a pitch deck, a grant deadline, competitor research, an overflowing inbox, a team report, customer feedback.</p>
+          <p>Somewhere on your list is: <strong>“Figure out how to use AI properly.”</strong></p>
+          <p>Maybe you already use ChatGPT or Claude. It helps. But you are still copying and pasting between apps, still doing most of the work yourself, and still being told to learn another tool.</p>
+          <p><strong>That is who this is for.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="capability wrap">
+      <p class="eyebrow"><span></span> What has changed</p>
+      <h2>AI can do a lot more<br>than answer questions.</h2>
+      <div class="capability-list">
+        <span>Work with your documents</span><span>Research competitors</span><span>Prepare reports</span><span>Monitor changes</span><span>Work with email and calendar</span><span>Organize your CRM</span><span>Build software</span><span>Run recurring workflows</span>
+      </div>
+      <p class="pullquote">You do not need to become a developer. You need to know what is possible, where it is useful, and how to put it to work safely.</p>
+    </section>
+
+    <section id="program" class="operating-system wrap section-grid">
+      <p class="section-number">02 / THE IDEA</p>
+      <div>
+        <h2>Build your Founder<br>AI Operating System.</h2>
+        <div class="prose narrow"><p>When the input is known and the output is known, the work in between does not all have to be done by you.</p><p>You define what comes in, what needs to come out, and what good looks like. AI handles as much as it can reliably and safely, with you stepping in where human judgment matters.</p></div>
+        <div class="flow"><span>INPUT</span><b>→</b><span>AI WORKFLOW</span><b>→</b><span>YOUR JUDGMENT</span><b>→</b><span>OUTPUT</span></div>
+        <p class="chalk-note">The goal is not maximum automation.<br><strong>It is the right work off your plate.</strong></p>
+      </div>
+    </section>
+
+    <section class="leverage">
+      <div class="wrap"><p class="section-number">03 / WHY NOW</p><h2>Build a bigger business.<br><em>Not a busier life.</em></h2><div class="prose narrow"><p>AI gives small teams access to leverage that once required more people, more money, and more hours.</p><p>Let machines do more of the searching, formatting, organizing, summarizing, monitoring, and repetitive work. Spend more time talking to customers, building relationships, making difficult decisions, creating, thinking, and being with the people you care about.</p></div></div>
+    </section>
+
+    <section id="how-it-works" class="curriculum wrap">
+      <p class="eyebrow"><span></span> The Founder AI OS</p>
+      <h2>Three weeks to move from<br>using AI as a chatbot to<br><em>putting it to work.</em></h2>
+      <div class="weeks">
+        <article><p>WEEK 1</p><h3>Work with AI</h3><p>Learn how to get genuinely useful work from AI, without blindly trusting it. Understand models, prompting, projects, memory, context, files, privacy, and the difference between generation and judgment.</p><strong>Choose the first thing you want AI to take off your plate.</strong></article>
+        <article><p>WEEK 2</p><h3>Connect AI to your work</h3><p>Move beyond copying and pasting. Connect AI to the places your work lives: email, calendar, documents, Notion, Slack, and Drive. Create repeatable instructions and workflows using your real business context.</p><strong>Build, test, and improve a real workflow.</strong></article>
+        <article><p>WEEK 3</p><h3>Build your AI operating system</h3><p>Learn how agents, scheduled tasks, automations, connectors, and human approval fit together. Map what should be autonomous, what needs your review, and what to tackle next.</p><strong>Leave with a prioritized roadmap and working foundations.</strong></article>
+      </div>
+    </section>
+
+    <section class="two-parts wrap"><div><p class="section-number">04 / HOW WE WORK</p><h2>Every session<br>has two parts.</h2></div><div class="parts"><article><p class="part-number">01</p><h3>Learn</h3><p>I teach the capabilities that matter and enough of what is happening underneath to use the technology intelligently.</p></article><article><p class="part-number">02</p><h3>Build</h3><p>Bring the messy workflow and the thing you have been meaning to automate. We work on your real business, then you use it between sessions.</p></article></div></section>
+
+    <section class="safety wrap"><p class="eyebrow"><span></span> A principle throughout</p><h2>Give AI enough access<br>to be useful. <em>Not enough<br>autonomy to be dangerous.</em></h2><p class="lead">An AI drafting an email is different from sending it. Reading a financial model is different from changing it. We design workflows so humans remain in control where consequences matter.</p></section>
+
+    <section id="about" class="about wrap section-grid"><p class="section-number">05 / ABOUT SUSANA</p><div><h2>I have been on both sides<br>of this technology.</h2><div class="prose columns"><p>I have built machine-learning systems for more than a decade. During my PhD in Computer Science, I worked on multimodal deep-learning models combining images and language.</p><p>I then became a founder, co-founded a computer-vision company, and led deep-learning work in recycling technology. I have also done the work founders know well: building, selling, fundraising, hiring, pitching, grants, partners, and endless to-do lists.</p><p>When generative AI arrived, I was skeptical. I had seen how impressive models could look and how spectacularly they could fail.</p><p>Then I kept using it. The breakthrough was not only better text. <strong>AI could use tools.</strong> I could explain what I wanted in natural language instead of learning another interface.</p></div></div></section>
+
+    <section class="personal wrap"><div class="portrait-placeholder"><span>Susana<br>Zoghbi</span></div><div><p class="eyebrow"><span></span> Building it too</p><h2>This is not theory.<br>I am building my own<br>AI OS too.</h2><div class="prose"><p>I am building a business around a short working day and two young children. AI helps me research, write, build software, manage information, and keep work moving while I am away from my computer.</p><p>I have not automated an entire company. I am building this operating system too.</p></div></div></section>
+
+    <section class="fit wrap"><div><p class="section-number">06 / FOR YOU</p><h2>This is for you if...</h2></div><ul><li>You are running an ambitious business with a small team.</li><li>You know AI could save time, but have been too busy to figure it out.</li><li>You have used ChatGPT or Claude, but mostly as a chatbot.</li><li>You want practical help, not another course to watch.</li><li>You want to use fewer tools, with more leverage.</li></ul></section>
+
+    <section id="waitlist" class="waitlist"><div class="wrap"><p class="eyebrow"><span></span> Currently 1:1 with me</p><h2>Ready to take work<br>off your plate?</h2><p class="lead">Join the waitlist for the three-week private Founder AI OS program. No payment required. I will contact you when a place becomes available.</p><form action="#" method="post"><label>Name<input type="text" name="name" autocomplete="name"></label><label>Email<input type="email" name="email" autocomplete="email"></label><label>What is one thing you would like AI to take off your plate?<textarea name="message" rows="3"></textarea></label><button class="button" type="submit">Join the 1:1 waitlist <b>↗</b></button></form></div></section>
+  </main>
+
+  <footer class="site-footer wrap"><a class="wordmark" href="#top">AI Founder <span>Academy</span></a><p>© {{ now.Year }} AI Founder Academy. Oslo, Norway.</p><a href="#top">Back to top ↑</a></footer>
+</div>
+{{ end }}
