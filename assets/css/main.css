@@ -163,7 +163,7 @@ h2 em {
   margin-top: 14px;
 }
 .microcopy {
-  font: 12px var(--mono);
+  font: 18px var(--mono);
   color: var(--muted);
   margin-top: 15px;
 }
@@ -186,7 +186,7 @@ h2 em {
   gap: 7px;
   padding: 9px 0;
   border-top: 1px dashed rgba(237, 240, 233, 0.25);
-  font: 11px var(--mono);
+  font: 16px var(--mono);
 }
 .board-line > span {
   color: var(--muted);
@@ -204,7 +204,7 @@ h2 em {
   border-left: 2px solid var(--cyan);
 }
 .board-note {
-  font: 24px var(--chalk);
+  font: 30px var(--chalk);
   color: var(--ink);
   max-width: 210px;
   margin: 23px 0 0;
