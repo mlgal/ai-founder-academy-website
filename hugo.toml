@@ -7,7 +7,7 @@ title = "AI Founder Academy"
 
 [menus]
   [[menus.main]]
-    name = "Founder AI OS"
+    name = "AI Founder OS"
     url = "#program"
     weight = 10
   [[menus.main]]

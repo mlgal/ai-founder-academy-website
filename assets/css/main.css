@@ -228,7 +228,7 @@ h2 em {
 h2 {
   font-size: clamp(35px, 4.4vw, 61px);
   line-height: 1.03;
-  letter-spacing: -0.06em;
+  /* letter-spacing: -0.06em; */
   font-weight: 600;
   margin-bottom: 34px;
 }
@@ -500,6 +500,17 @@ textarea {
 .site-footer > a:last-child {
   color: var(--muted);
   text-decoration: none;
+}
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+.social-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.social-links a:hover {
+  color: var(--cyan);
 }
 @media (max-width: 780px) {
   .wrap {
