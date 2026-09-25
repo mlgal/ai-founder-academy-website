@@ -6,6 +6,7 @@
   --muted: #aeb7af;
   --cyan: #64d5d0;
   --yellow: #e7c960;
+  --purple: #9B7BC7;
   --coral: #dd8879;
   --line: rgba(237, 240, 233, 0.18);
   --sans: "DM Sans", sans-serif;
@@ -73,6 +74,7 @@ nav a:hover {
   gap: 24px;
   padding: 15px 19px;
   border: 1px solid var(--cyan);
+  border-radius: 5px;
   background: var(--cyan);
   color: #0d1514;
   text-decoration: none;
@@ -149,7 +151,7 @@ h2 em {
 .secondary em {
   font-style: normal;
   text-decoration: underline;
-  text-decoration-color: var(--cyan);
+  /* text-decoration-color: var(--yellow); */
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
