@@ -76,7 +76,7 @@ nav a:hover {
   background: var(--cyan);
   color: #0d1514;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   cursor: pointer;
 }
@@ -96,19 +96,22 @@ nav a:hover {
   min-height: 700px;
   padding: 82px 0;
 }
-.eyebrow,
-.section-number {
-  font: 500 11px var(--mono);
+.eyebrow {
+  font: 500 22px var(--mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cyan);
 }
-.eyebrow {
-  font-size: 14px;
+.section-number {
+  font: 500 28px var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cyan);
 }
+
 .eyebrow span {
   display: inline-block;
-  width: 17px;
+  width: 50px;
   height: 1px;
   background: var(--cyan);
   vertical-align: middle;
@@ -129,7 +132,7 @@ h1 {
 }
 h1 em,
 h2 em {
-  font-family: var(--chalk);
+  font-family: 'Nanum Pen Script', cursive;
   font-size: 1.13em;
   font-weight: 400;
   color: var(--yellow);
@@ -141,6 +144,14 @@ h2 em {
   line-height: 1.52;
   color: #d0d7d1;
   max-width: 620px;
+}
+.lead em,
+.secondary em {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: var(--cyan);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 .secondary {
   color: var(--muted);
