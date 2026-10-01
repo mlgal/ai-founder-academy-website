@@ -451,22 +451,24 @@ h3 {
   color: #1f3937;
   max-width: 620px;
 }
-.waitlist form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
+.waitlist-form {
   margin-top: 42px;
   max-width: 770px;
 }
-.waitlist label {
+.waitlist-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.waitlist-form label {
   font: 12px var(--mono);
   color: #1f3937;
 }
-.waitlist label:last-of-type {
-  grid-column: span 2;
+.waitlist-question {
+  grid-column: 1 / -1;
 }
-input,
-textarea {
+.waitlist-form input,
+.waitlist-form textarea {
   display: block;
   width: 100%;
   border: 0;
@@ -476,7 +478,25 @@ textarea {
   color: #0d1716;
   font: 16px var(--sans);
   outline: 0;
+}
+.waitlist-form textarea {
+  min-height: 88px;
   resize: vertical;
+}
+.waitlist-form input:focus,
+.waitlist-form textarea:focus {
+  border-bottom-color: #0d1716;
+}
+.waitlist .formkit-alert {
+  display: none;
+  margin: 0 0 18px;
+  padding: 10px 12px;
+  border: 1px solid rgba(13, 23, 22, 0.55);
+  color: #0d1716;
+  font-size: 14px;
+}
+.waitlist .formkit-alert:not(:empty) {
+  display: block;
 }
 .waitlist .button {
   border-color: #0d1716;
@@ -485,9 +505,19 @@ textarea {
   width: max-content;
   margin-top: 8px;
 }
+.waitlist .formkit-submit > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+}
 .waitlist .button:hover {
   background: transparent;
   color: #0d1716;
+}
+.form-note {
+  margin: 14px 0 0;
+  color: #1f3937;
+  font-size: 13px;
 }
 .site-footer {
   display: flex;
@@ -564,11 +594,8 @@ textarea {
   .waitlist {
     padding: 80px 0;
   }
-  .waitlist form {
+  .waitlist-fields {
     grid-template-columns: 1fr;
-  }
-  .waitlist label:last-of-type {
-    grid-column: auto;
   }
   .site-footer {
     flex-wrap: wrap;
