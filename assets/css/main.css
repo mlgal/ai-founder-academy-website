@@ -512,14 +512,15 @@ h3 {
   margin-bottom: 24px;
 }
 .portrait {
-  display: grid;
-  place-items: center;
+  position: relative;
   aspect-ratio: 1;
+}
+.portrait::before {
+  content: "";
+  position: absolute;
+  inset: 8% 4% 0 4%;
   border-radius: 58% 42% 52% 48% / 46% 54% 46% 54%;
   background: var(--butter);
-  font: 800 88px var(--serif);
-  color: var(--ink);
-  letter-spacing: -0.04em;
 }
 
 /* Fit */
@@ -675,4 +676,15 @@ h3 {
   .button {
     transition: none;
   }
+}
+
+.portrait img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  clip-path: inset(3px);
+  -webkit-mask-image: linear-gradient(#000 86%, transparent);
+  mask-image: linear-gradient(#000 86%, transparent);
 }
