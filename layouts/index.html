@@ -1,5 +1,6 @@
 {{ define "main" }}
 <div class="frame" id="top">
+  <div class="top-band">
   <header class="site-header wrap">
     <a class="wordmark" href="#top">AI Founder <span>Academy</span></a>
     <nav id="primary-navigation" aria-label="Main navigation">
@@ -8,7 +9,6 @@
     <a class="button button-small" href="https://calendar.app.google/QP83cujbtQDZKt4u7" target="_blank" rel="noopener noreferrer">Book a call</a>
   </header>
 
-  <main>
     <section class="hero wrap">
       <div class="hero-copy">
         <h1>Stop just chatting with AI. Start <span class="swoosh">taking work off</span> your plate.</h1>
@@ -36,6 +36,9 @@
         </figure>
       </div>
     </section>
+  </div>
+
+  <main>
 
     <section class="block problem wrap">
       <div class="card card-white split">
@@ -188,11 +191,13 @@
     </section>
   </main>
 
-  <footer class="site-footer wrap">
+  <footer class="site-footer">
+    <div class="foot">
     <a class="wordmark" href="#top">AI Founder <span>Academy</span></a>
     <p>&copy; {{ now.Year }} AI Founder Academy. Oslo, Norway.</p>
     <div class="social-links"><a href="https://www.linkedin.com/in/susana-zoghbi/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.youtube.com/@zsusana/podcasts" target="_blank" rel="noopener noreferrer">YouTube</a></div>
     <a href="#top">Back to top</a>
+    </div>
   </footer>
 </div>
 {{ end }}

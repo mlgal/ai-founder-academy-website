@@ -1,12 +1,14 @@
 :root {
-  --ink: #221b33;
+  --ink: #231b3a;
   --muted: #5d5670;
-  --cream: #f8f3ec;
-  --violet: #6c4be8;
-  --violet-deep: #5336c9;
+  --cream: #fbf8ff;
+  --violet: #6b4fd8;
+  --violet-deep: #5339bd;
   --butter: #ffd76a;
+  --pink: #ff9bb3;
+  --lilac-deep: #dcd0fa;
   --sky: #8ad6f5;
-  --lilac: #dcd0fa;
+  --lilac: #efe6fb;
   --mint: #bfebd7;
   --rule: rgba(34, 27, 51, 0.14);
   --serif: "Fraunces", Georgia, serif;
@@ -93,7 +95,7 @@ a {
   color: #fff;
 }
 .card-lilac {
-  background: var(--lilac);
+  background: var(--lilac-deep);
 }
 .card-sky {
   background: var(--sky);
@@ -147,8 +149,11 @@ h3 {
   margin-top: 24px;
 }
 .swoosh {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9c30-8 55 5 85-1s58-6 90 0 60 4 118-3' fill='none' stroke='%236c4be8' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat left bottom / 100% 0.2em;
-  padding-bottom: 0.14em;
+  padding: 0 0.1em;
+  margin: 0 -0.1em;
+  background: linear-gradient(transparent 58%, var(--pink) 58% 94%, transparent 94%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 .pull {
   max-width: 30em;
@@ -292,7 +297,7 @@ h3 {
 .ledger .ai {
   padding: 5px 9px;
   border-radius: 999px;
-  background: linear-gradient(var(--lilac), var(--lilac)) no-repeat left / 100% 100%;
+  background: linear-gradient(var(--lilac-deep), var(--lilac-deep)) no-repeat left / 100% 100%;
   animation: hand-off 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   animation-delay: calc(0.5s + var(--i) * 0.45s);
 }
@@ -447,7 +452,7 @@ h3 {
 }
 .doodle .fill-butter { fill: var(--butter); }
 .doodle .fill-sky { fill: var(--sky); }
-.doodle .fill-lilac { fill: var(--lilac); }
+.doodle .fill-lilac { fill: var(--mint); }
 .weeks .when {
   margin-top: -8px;
   font-weight: 700;
@@ -520,7 +525,7 @@ h3 {
   position: absolute;
   inset: 8% 4% 0 4%;
   border-radius: 58% 42% 52% 48% / 46% 54% 46% 54%;
-  background: var(--butter);
+  background: var(--sky);
 }
 
 /* Fit */
@@ -685,6 +690,95 @@ h3 {
   height: 100%;
   object-fit: contain;
   clip-path: inset(3px);
-  -webkit-mask-image: linear-gradient(#000 86%, transparent);
-  mask-image: linear-gradient(#000 86%, transparent);
+  -webkit-mask-image: linear-gradient(#000, #000), radial-gradient(ellipse 48% 46% at 50% 54%, #000 99%, transparent 100%);
+  -webkit-mask-size: 100% 58%, 100% 100%;
+  -webkit-mask-position: top, center;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: linear-gradient(#000, #000), radial-gradient(ellipse 48% 46% at 50% 54%, #000 99%, transparent 100%);
+  mask-size: 100% 58%, 100% 100%;
+  mask-position: top, center;
+  mask-repeat: no-repeat;
+}
+
+/* Lilac sorbet: tinted bands for header, hero and footer */
+.top-band,
+.site-footer {
+  background: var(--lilac);
+}
+.top-band {
+  padding-bottom: 32px;
+}
+.site-footer {
+  margin-top: 72px;
+}
+.site-footer .foot {
+  width: min(1100px, calc(100% - 64px));
+  margin: 0 auto;
+}
+@media (max-width: 860px) {
+  .site-footer .foot {
+    width: calc(100% - 32px);
+  }
+}
+.site-footer {
+  display: block;
+  padding: 0;
+}
+.site-footer .foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  padding: 48px 0 40px;
+}
+
+/* Open sections: text-heavy blocks sit on the page, not in boxes */
+.problem > .card,
+.idea > .card,
+.safety > .card,
+.fit > .card {
+  padding: 72px 0 0;
+  border-top: 1.5px solid var(--ink);
+  border-radius: 0;
+  background: none;
+}
+.block.problem,
+.block.idea,
+.block.safety,
+.block.fit {
+  margin-top: 72px;
+}
+.pipeline li {
+  background: var(--lilac);
+}
+.pipeline li.human {
+  background: var(--butter);
+}
+.todo {
+  background: var(--lilac);
+}
+@media (max-width: 860px) {
+  .problem > .card,
+  .idea > .card,
+  .safety > .card,
+  .fit > .card {
+    padding-top: 48px;
+  }
+  .block.problem,
+  .block.idea,
+  .block.safety,
+  .block.fit {
+    margin-top: 48px;
+  }
+}
+
+/* Sprinkle blue, yellow and green */
+.weeks li:nth-child(2) .outcome { background: var(--sky); }
+.weeks li:nth-child(3) .outcome { background: var(--mint); }
+.pipeline li:nth-child(1) { background: var(--sky); }
+.pipeline li:nth-child(4) { background: var(--mint); }
+.pipeline li:nth-child(1) span,
+.pipeline li:nth-child(4) span {
+  color: var(--ink);
 }
